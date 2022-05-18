@@ -9,6 +9,7 @@ To make this code working you have to:
     - DB_USERNAME=
     - DB_PASSWORD=
 <p>Usually you just have to set DB_DATABASE and DB_PASSWORD, but better checking others too.</p>
+
 1. Open a bash console, navigate to the project directory and run the following commands in order:
     - <code>composer install</code>
     - <code>npm install && npm run dev</code>
