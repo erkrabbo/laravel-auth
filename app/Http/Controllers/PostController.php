@@ -1,8 +1,7 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
 use App\Post;
 use Illuminate\Http\Request;
 
@@ -13,9 +12,16 @@ class PostController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function __construct()
+    {
+        $this->middleware('auth')->except('index', 'show');
+    }
+
     public function index()
     {
-        //
+        $posts = Post::paginate(20);
+
+        return view('home', compact('posts'));
     }
 
     /**
