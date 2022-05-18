@@ -8,7 +8,7 @@ To make this code working you have to:
     - DB_DATABASE=
     - DB_USERNAME=
     - DB_PASSWORD=
-    Usually you just have to set DB_DATABASE and DB_PASSWORD, but better checking others too.
+<p>Usually you just have to set DB_DATABASE and DB_PASSWORD, but better checking others too.</p>
 1. Open a bash console, navigate to the project directory and run the following commands in order:
     - <code>composer install</code>
     - <code>npm install && npm run dev</code>
@@ -18,5 +18,5 @@ To make this code working you have to:
 ### (the "{yourPort}" field usually is 8000 but it may be different)
 
 Register and Login are hidden to guest users
-go to <code>localhost:{yourPort}/register</code> to register your account, you will automatically redirected to the admin home.
+go to <code>localhost:{yourPort}/register</code> to register your account, you will be automatically redirected to the admin home.
 if you already have an account go to <code>localhost:{yourPort}/login</code> to login.
