@@ -17,7 +17,13 @@ use Illuminate\Support\Facades\Auth;
 
 Auth::routes();
 
-Route::resource('/', 'Admin\PostController');
+Route::resource('/post', 'Admin\PostController');
+
+Route::get("{any?}", function() {
+    return view('home');
+})->where("any", ".*");
+
+
 
 // Route::middleware('auth')
 // ->namespace('admin')
