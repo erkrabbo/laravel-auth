@@ -14,18 +14,17 @@ use Illuminate\Support\Facades\Auth;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
 Auth::routes();
 
-Route::middleware('auth')
-->namespace('admin')
-->prefix('admin')
-->group(function () {
-    Route::get('/', 'HomeController@index')
-    ->name('home');
-});
+Route::resource('/', 'Admin\PostController');
 
-Route::resource('/', 'PostController');
+// Route::middleware('auth')
+// ->namespace('admin')
+// ->prefix('admin')
+// ->group(function () {
+//     Route::resource('/', 'PostController');
+// });
+
+// Route::get('/', 'HomeController@index')
+// ->name('home');

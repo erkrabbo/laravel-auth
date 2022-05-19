@@ -15,9 +15,14 @@
                         @endauth
                         <p>{{ $post->content }}</p>
                     </div>
+                    <a href="{{ route('show', $post) }}" class="btn btn-primary">See more</a>
                 </div>
             </div>
         @endforeach
+
+        <div class="pagination pt-2">
+            {{ $posts->links() }}
+        </div>
     </div>
 </div>
 @endsection
