@@ -30,3 +30,15 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
 const app = new Vue({
     el: '#app',
 });
+const deleteModal = document.querySelector('#deleteModal');
+
+if(deleteModal) {
+    document.querySelectorAll('#confirm-delete-js').forEach(button => {
+        button.addEventListener('click', function () {
+            const id = this.closest('#post-card-js').dataset.postid;
+            const deleteForm = deleteModal.querySelector('#form-delete-js');
+            const action = deleteForm.dataset.base.replace('*****', id);
+            deleteForm.action = action;
+        })
+    })
+}

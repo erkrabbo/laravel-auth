@@ -13,15 +13,15 @@ use Illuminate\Support\Facades\Auth;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+Route::get('/', function () {
+    return view('home');
+});
 
 Auth::routes();
 
 Route::resource('/post', 'Admin\PostController');
 
-Route::get("{any?}", function() {
-    return view('home');
-})->where("any", ".*");
+
 
 
 
