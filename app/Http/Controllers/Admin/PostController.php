@@ -24,7 +24,7 @@ class PostController extends Controller
             'title'     => 'required|max:100',
             'slug' => [
                 'required',
-                Rule::unique('post')->ignore($post),
+                Rule::unique('posts')->ignore($post),
                 'max:100'
             ],
             'content'   => 'required'
