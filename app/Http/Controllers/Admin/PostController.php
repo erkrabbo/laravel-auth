@@ -31,6 +31,12 @@ class PostController extends Controller
         ];
     }
 
+    public function slugger(Request $request) {
+        return response()->json([
+            'slug' => Post::generateSlug($request->all()['originalStr'])
+        ]);
+    }
+
 
     /**
      * Display a listing of the resource.
@@ -63,7 +69,8 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate($this->getValidators(null));
+        $newPost = new Post($request->all());
+        $request->validate($this->getValidators($newPost));
 
         $post = Post::create($request->all());
 

@@ -54,6 +54,8 @@
                                         {{ __('Logout') }}
                                     </a>
 
+                                    <a href="{{route('post.create')}}" class="btn btn-success btn-sm mx-2">CREATE NEW POST</a>
+
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                         @csrf
                                     </form>

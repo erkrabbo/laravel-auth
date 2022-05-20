@@ -13,7 +13,7 @@
                                 <a href="{{route('post.edit', $post )}}" class="btn btn-warning btn-sm mx-2">EDIT</a>
                                 <button id="modalToggler" type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#deleteModal">
                                     &cross;
-                                  </button>
+                                </button>
                                 {{-- <button type="button" class="btn btn-danger btn-sm" id="modalToggler">
                                     &cross;
                                 </button> --}}

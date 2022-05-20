@@ -19,6 +19,10 @@ Route::get('/', function () {
 
 Auth::routes();
 
+
+Route::post('/slugger', 'Admin\PostController@slugger')
+    ->name('slugger');
+
 Route::resource('/post', 'Admin\PostController');
 
 
